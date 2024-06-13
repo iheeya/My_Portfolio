@@ -1,56 +1,66 @@
 <template>
-  <section id="skills">
-    <h3>Skills</h3>
-    <p>lan</p>
+  <section id="introduce">
+    <div class="info-container">
+      <h3>Skills</h3>
+    </div>
   </section>
 </template>
 
 <script setup></script>
 
 <style scoped>
-/* 미디어 쿼리 추가 */
-
-/* 세로모드 모바일 디바이스 (가로 해상도가 576px 보다 작은 화면에 적용) */
+/* Mobile - Portrait */
 @media (max-width: 575px) {
   section h3 {
-    font-size: 18px;
+    font-size: 40px;
   }
 
-  section p {
-    font-size: 10px;
-  }
-}
-
-/* 가로모드 모바일 디바이스 (가로 해상도가 768px 보다 작은 화면에 적용) */
-@media (max-width: 767px) {
-  section h3 {
+  .info-container p {
     font-size: 20px;
   }
+}
 
-  section p {
-    font-size: 11px;
+/* Mobile - Landscape */
+@media (min-width: 576px) and (max-width: 767px) {
+  section h3 {
+    font-size: 40px;
+  }
+
+  .info-container p {
+    font-size: 20px;
   }
 }
 
-/* 태블릿 디바이스 (가로 해상도가 992px 보다 작은 화면에 적용) */
-@media (max-width: 991px) {
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
   section h3 {
-    font-size: 22px;
+    font-size: 50px;
   }
 
-  section p {
-    font-size: 12px;
+  .info-container p {
+    font-size: 30px;
   }
 }
 
-/* 데스크탑 (가로 해상도가 1200px 보다 작은 화면에 적용) */
-@media (max-width: 1199px) {
+/* Desktop */
+@media (min-width: 992px) and (max-width: 1199px) {
   section h3 {
-    font-size: 24px;
+    font-size: 50px;
   }
 
-  section p {
-    font-size: 12px;
+  .info-container p {
+    font-size: 30px;
+  }
+}
+
+/* Desktop (Large) */
+@media (min-width: 1200px) {
+  section h3 {
+    font-size: 60px;
+  }
+
+  .info-container p {
+    font-size: 38px;
   }
 }
 </style>

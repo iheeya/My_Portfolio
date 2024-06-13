@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="margin: 0px">
     <header class="navbar">
       <div class="logo">
         <a @click="scrollToSection('about-me')" class="logo">HEE's</a>
@@ -98,9 +98,7 @@ nav ul li a {
 section {
   height: 100vh; /* 화면의 전체 높이 */
   display: flex;
-  justify-content: center;
   padding: 20px;
-  text-align: center;
 }
 
 .portfolio {
@@ -109,15 +107,6 @@ section {
 
 .head {
   font-size: 30px;
-}
-
-section h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-section p {
-  font-size: 12px;
 }
 
 /* 고정된 위치의 footer 스타일링 */
