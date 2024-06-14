@@ -1,8 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
+// import MovieView from "@/views/MovieView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [],
+  routes: [
+    // {
+    //   path: "/MoviePJT",
+    //   name: "movie",
+    //   component: MovieView,
+    // },
+  ],
 });
 
 export default router;

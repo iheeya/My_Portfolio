@@ -60,6 +60,7 @@ const scrollToNextSection = () => {
   display: inline-block; /* h3 요소를 inline-block으로 설정하여 텍스트와 커서가 같은 라인에 위치하도록 합니다. */
   position: relative; /* 상대 위치 설정 */
   white-space: pre-wrap; /* 줄바꿈 유지 */
+  color: rgb(179, 111, 111); /* 이 부분에서 Hello 텍스트의 색상을 설정 */
 }
 
 .cursor::after {
@@ -68,7 +69,7 @@ const scrollToNextSection = () => {
   top: -0.09em; /* 텍스트와 커서를 수직 정렬합니다 */
   margin-left: 5px; /* 좌측 여백을 추가하여 텍스트와 커서 간의 간격을 조정합니다. */
   animation: cursor 0.7s infinite;
-  color: white; /* 흰색 */
+  color: rgb(179, 111, 111); /* 흰색 */
 }
 
 .arrow-container {
@@ -130,6 +131,13 @@ const scrollToNextSection = () => {
 @media (min-width: 1200px) {
   section h3 {
     font-size: 80px;
+  }
+}
+
+/* 데스크탑 화면 분할 미디어 쿼리 */
+@media (min-width: 600px) and (max-width: 900px) {
+  section h3 {
+    font-size: 60px;
   }
 }
 

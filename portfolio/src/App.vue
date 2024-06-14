@@ -2,7 +2,7 @@
   <div style="margin: 0px">
     <header class="navbar">
       <div class="logo">
-        <a @click="scrollToSection('about-me')" class="logo">HEE's</a>
+        <a @click="scrollToSection('about-me')" class="logo">CHOIDAHEE</a>
       </div>
       <nav>
         <ul>
@@ -49,7 +49,7 @@ onMounted(() => {
 <style scoped>
 /* 전체 화면 배경 색 적용 */
 :global(body) {
-  background-color: black; /* 어두운 우주 배경색 */
+  background-color: rgb(55, 55, 55); /* 어두운 우주 배경색 */
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif; /* 공항 안내 방송 기사를 참조하여 수정 */
@@ -62,7 +62,7 @@ onMounted(() => {
   justify-content: space-between;
   align-items: center;
   padding: 20px 45px;
-  background-color: rgb(3, 3, 3);
+  background-color: rgb(55, 55, 55);
   color: white;
   opacity: 0.9;
   /* nav바 상단 고정 */
@@ -79,7 +79,6 @@ onMounted(() => {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
   margin: 0;
   padding: 0;
 }
@@ -91,14 +90,13 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
 }
 
 /* 각 섹션이 화면의 전체 높이를 차지하도록 설정 */
 section {
-  height: 100vh; /* 화면의 전체 높이 */
+  /* height: 100vh; 화면의 전체 높이 */
   display: flex;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .portfolio {
@@ -115,8 +113,98 @@ section {
   width: 100%;
   text-align: center;
   padding: 10px 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(55, 55, 55);
   color: white;
   font-size: 14px;
+}
+
+/* Mobile - Portrait */
+@media (max-width: 575px) {
+  nav ul li a {
+    font-size: 15px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+}
+
+/* Mobile - Landscape */
+@media (min-width: 576px) and (max-width: 767px) {
+  nav ul li a {
+    font-size: 15px;
+  }
+
+  nav ul {
+    gap: 30px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  nav ul {
+    gap: 30px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) and (max-width: 1199px) {
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  nav ul {
+    gap: 40px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+
+/* Desktop (Large) */
+@media (min-width: 1200px) {
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  nav ul {
+    gap: 40px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+
+/* 데스크탑 화면 분할 미디어 쿼리 */
+@media (min-width: 600px) and (max-width: 900px) {
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  nav ul {
+    gap: 40px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
 }
 </style>
