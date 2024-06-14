@@ -60,7 +60,7 @@ const projectDetails = {
     date: "2024.05.12 ~ 2024.05.23",
     people: "2인 프로젝트",
     description:
-      "영화 보는 것을 좋아하는 사람들을 위한 웹사이트. 사용자가 좋아하는 영화를 기반으로 영화를 추천해주고, 영화에 대해 토론할 수 있는 웹 사이트를 만들고자 했다.",
+      "영화 보는 것을 좋아하는 사람들을 위한 웹사이트. 사용자가 좋아하는 영화를 기반으로 영화를 추천해주고, 영화에 대해 토론할 수 있는 웹 사이트를 만들고자 했습니다.",
     languages:
       '<img src="https://img.shields.io/badge/html-5C6B81?style=for-the-badge&logo=html5&logoColor=white" />' +
       '<img src="https://img.shields.io/badge/css-264DE4?style=for-the-badge&logo=css3&logoColor=white" /> ' +
@@ -74,9 +74,10 @@ const projectDetails = {
     github: "https://github.com/iheeya/Movie-PJT",
   },
   포트폴리오: {
-    date: "2024.05 ~ still updating..",
+    date: "2024.06 ~ still updating..",
     people: "1인 프로젝트",
-    description: "나의 포트폴리오를 한 눈에 볼 수 있도록 웹 사이트로 만들었다.",
+    description:
+      "나의 포트폴리오를 한 눈에 볼 수 있도록 웹 사이트로 만들었습니다.",
     languages:
       '<img src="https://img.shields.io/badge/html-5C6B81?style=for-the-badge&logo=html5&logoColor=white" />' +
       '<img src="https://img.shields.io/badge/css-264DE4?style=for-the-badge&logo=css3&logoColor=white" /> ' +
