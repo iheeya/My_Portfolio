@@ -49,7 +49,7 @@ onMounted(() => {
 <style scoped>
 /* 전체 화면 배경 색 적용 */
 :global(body) {
-  background-color: rgb(55, 55, 55); /* 어두운 우주 배경색 */
+  background-color: rgb(55, 55, 55);
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif; /* 공항 안내 방송 기사를 참조하여 수정 */

@@ -28,7 +28,17 @@
       <span class="close" @click="closeModal">&times;</span>
       <div class="modal-title">{{ modalTitle }}</div>
       <div class="modal-body">
+        <p>{{ modalDate }}</p>
+        <p>{{ modalPeople }}</p>
         <p>{{ modalContent }}</p>
+        <p>
+          <span v-html="modalLanguages"></span>
+        </p>
+        <p>
+          <a :href="modalGithub" target="_blank" class="github">
+            <i class="fab fa-github"></i> More Info in GitHub
+          </a>
+        </p>
       </div>
     </div>
   </div>
@@ -40,19 +50,49 @@ import { ref } from "vue";
 const isModalOpen = ref(false);
 const modalTitle = ref("");
 const modalContent = ref("");
+const modalLanguages = ref("");
+const modalGithub = ref("");
+const modalDate = ref("");
+const modalPeople = ref("");
 
-// 프로젝트 상세 내용을 저장하는 객체
 const projectDetails = {
-  "영화 프로젝트":
-    "영화 프로젝트의 상세 내용입니다. 이 프로젝트는 영화 데이터를 분석하고 시각화하는 프로젝트입니다.",
-  포트폴리오:
-    "포트폴리오 프로젝트의 상세 내용입니다. 이 프로젝트는 개인 포트폴리오 웹사이트를 만드는 프로젝트입니다.",
+  "영화 프로젝트": {
+    date: "2024.05.12 ~ 2024.05.23",
+    people: "2인 프로젝트",
+    description:
+      "영화 보는 것을 좋아하는 사람들을 위한 웹사이트. 사용자가 좋아하는 영화를 기반으로 영화를 추천해주고, 영화에 대해 토론할 수 있는 웹 사이트를 만들고자 했다.",
+    languages:
+      '<img src="https://img.shields.io/badge/html-5C6B81?style=for-the-badge&logo=html5&logoColor=white" />' +
+      '<img src="https://img.shields.io/badge/css-264DE4?style=for-the-badge&logo=css3&logoColor=white" /> ' +
+      '<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> ' +
+      '<img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" /> ' +
+      '<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white" /> ' +
+      '<img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white" /> ' +
+      '<img src="https://img.shields.io/badge/sqlite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" /> ' +
+      '<img src="https://img.shields.io/badge/bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" /> ' +
+      '<img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />',
+    github: "https://github.com/iheeya/Movie-PJT",
+  },
+  포트폴리오: {
+    date: "2024.05 ~ still updating..",
+    people: "1인 프로젝트",
+    description: "나의 포트폴리오를 한 눈에 볼 수 있도록 웹 사이트로 만들었다.",
+    languages:
+      '<img src="https://img.shields.io/badge/html-5C6B81?style=for-the-badge&logo=html5&logoColor=white" />' +
+      '<img src="https://img.shields.io/badge/css-264DE4?style=for-the-badge&logo=css3&logoColor=white" /> ' +
+      '<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> ' +
+      '<img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" />',
+    github: "https://github.com/iheeya/My_Portfolio",
+  },
 };
 
 const openModal = (title) => {
   modalTitle.value = title;
-  modalContent.value = projectDetails[title]; // 제목에 맞는 상세 내용을 설정
-  console.log(title, modalTitle.value, modalContent.value); // 콘솔 로그 확인
+  modalContent.value = projectDetails[title].description;
+  modalLanguages.value = projectDetails[title].languages;
+  modalGithub.value = projectDetails[title].github;
+  modalDate.value = projectDetails[title].date;
+  modalPeople.value = projectDetails[title].people;
   isModalOpen.value = true;
 };
 
@@ -64,6 +104,11 @@ const closeModal = () => {
 <style scoped>
 #projects {
   margin-bottom: 200px;
+}
+
+.github {
+  text-decoration: none;
+  color: rgb(179, 111, 111);
 }
 
 .title {
@@ -130,7 +175,6 @@ const closeModal = () => {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.8);
 }
 
