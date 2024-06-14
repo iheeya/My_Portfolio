@@ -52,7 +52,7 @@ const scrollToNextSection = () => {
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* 요소들을 위로 정렬 */
-  padding-top: 50px; /* 상단 여백을 추가하여 요소들을 약간 아래로 이동 */
+  padding-top: 180px; /* 상단 여백을 추가하여 요소들을 약간 아래로 이동 */
 }
 
 /* Common styles */

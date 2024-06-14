@@ -36,10 +36,12 @@
 /* Mobile - Portrait */
 .title {
   color: rgb(179, 111, 111);
+  margin-bottom: 30px;
 }
 
 #introduce {
-  padding-bottom: 50px;
+  padding-bottom: 150px;
+  padding-top: 150px;
 }
 
 @media (max-width: 575px) {

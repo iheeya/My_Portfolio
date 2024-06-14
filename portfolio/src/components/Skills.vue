@@ -1,5 +1,5 @@
 <template>
-  <section id="introduce">
+  <section id="skills">
     <div class="info-container">
       <h3 class="title">Skills</h3>
       <p>Language</p>
@@ -59,8 +59,16 @@
 <script setup></script>
 
 <style scoped>
+#skills {
+  margin-top: 50px;
+}
 .title {
   color: rgb(179, 111, 111);
+  margin-bottom: 30px;
+}
+
+.info-container p {
+  margin-top: 30px;
 }
 
 .skills-icons {
@@ -85,6 +93,10 @@
   .info-container {
     margin-left: 30px;
   }
+
+  #skills {
+    margin-bottom: 150px;
+  }
 }
 
 /* Mobile - Landscape */
@@ -95,6 +107,10 @@
 
   .info-container p {
     font-size: 20px;
+  }
+
+  #skills {
+    margin-bottom: 150px;
   }
 }
 
@@ -107,6 +123,10 @@
   .info-container p {
     font-size: 22px;
   }
+
+  #skills {
+    margin-bottom: 150px;
+  }
 }
 
 /* Desktop */
@@ -117,6 +137,10 @@
 
   .info-container p {
     font-size: 30px;
+  }
+
+  #skills {
+    margin-bottom: 150px;
   }
 }
 
@@ -132,6 +156,7 @@
 
   .info-container {
     margin-left: 190px;
+    padding-bottom: 180px;
   }
 }
 
@@ -147,6 +172,10 @@
 
   .info-container {
     margin-left: 40px;
+  }
+
+  #skills {
+    margin-bottom: 150px;
   }
 }
 </style>
