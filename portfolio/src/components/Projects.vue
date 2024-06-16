@@ -167,7 +167,6 @@ onUnmounted(() => {
 .info-container {
   max-width: calc(100% - 20px);
   margin-left: 30px;
-  margin-right: 180px;
 }
 
 .project {
@@ -238,6 +237,8 @@ onUnmounted(() => {
   width: 80%;
   max-width: 600px;
   text-align: center;
+  max-height: 70%;
+  overflow-y: auto;
 }
 
 .close {
@@ -278,6 +279,12 @@ onUnmounted(() => {
   .info-container {
     margin-left: 30px;
   }
+
+  .project-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
 }
 
 /* Mobile - Landscape */
@@ -311,6 +318,11 @@ onUnmounted(() => {
   .info-container p {
     font-size: 30px;
   }
+
+  .info-container {
+    margin-right: 180px;
+    margin-right: 180px;
+  }
 }
 
 /* Desktop (Large) */
@@ -325,6 +337,7 @@ onUnmounted(() => {
 
   .info-container {
     margin-left: 190px;
+    margin-right: 180px;
   }
 }
 
@@ -340,6 +353,7 @@ onUnmounted(() => {
 
   .info-container {
     margin-left: 40px;
+    margin-right: 40px;
   }
 }
 </style>
