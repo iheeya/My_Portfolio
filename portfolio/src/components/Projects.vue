@@ -20,24 +20,7 @@
           <div class="project-name">포트폴리오</div>
         </div>
 
-        <!-- 테스트용 -->
-        <div class="project-item" @click="openModal('영화 프로젝트')">
-          <img
-            src="/movie.png"
-            alt="영화 프로젝트"
-            class="project-img movie-pjt"
-          />
-          <div class="project-name">영화 프로젝트</div>
-        </div>
-        <div class="project-item" @click="openModal('포트폴리오')">
-          <img
-            src="/portfolio.png"
-            alt="포트폴리오"
-            class="project-img portfolio-pjt"
-          />
-          <div class="project-name">포트폴리오</div>
-        </div>
-        <!-- ============================= -->
+      
       </div>
     </div>
   </section>
