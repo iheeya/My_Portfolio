@@ -2,7 +2,7 @@
   <section id="projects">
     <div class="info-container">
       <h3 class="title">Projects</h3>
-      <div class="project">
+      <div class="project" ref="projectContainer">
         <div class="project-item" @click="openModal('영화 프로젝트')">
           <img
             src="/movie.png"
@@ -19,6 +19,25 @@
           />
           <div class="project-name">포트폴리오</div>
         </div>
+
+        <!-- 테스트용 -->
+        <div class="project-item" @click="openModal('영화 프로젝트')">
+          <img
+            src="/movie.png"
+            alt="영화 프로젝트"
+            class="project-img movie-pjt"
+          />
+          <div class="project-name">영화 프로젝트</div>
+        </div>
+        <div class="project-item" @click="openModal('포트폴리오')">
+          <img
+            src="/portfolio.png"
+            alt="포트폴리오"
+            class="project-img portfolio-pjt"
+          />
+          <div class="project-name">포트폴리오</div>
+        </div>
+        <!-- ============================= -->
       </div>
     </div>
   </section>
@@ -45,7 +64,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const isModalOpen = ref(false);
 const modalTitle = ref("");
@@ -54,6 +73,8 @@ const modalLanguages = ref("");
 const modalGithub = ref("");
 const modalDate = ref("");
 const modalPeople = ref("");
+
+const projectContainer = ref(null);
 
 const projectDetails = {
   "영화 프로젝트": {
@@ -100,6 +121,32 @@ const openModal = (title) => {
 const closeModal = () => {
   isModalOpen.value = false;
 };
+
+// 스크롤을 통해 움직이도록 만듬
+const handleScroll = (event) => {
+  if (projectContainer.value) {
+    // 스크롤 방향 체크
+    const scrollDirection = event.deltaY > 0 ? 1 : -1;
+
+    // 스크롤 위치 조정
+    projectContainer.value.scrollLeft += scrollDirection * 50; // 스크롤 속도 조정
+
+    // 전체 화면이 함께 움직이지 않도록
+    event.preventDefault();
+  }
+};
+
+onMounted(() => {
+  if (projectContainer.value) {
+    projectContainer.value.addEventListener("wheel", handleScroll);
+  }
+});
+
+onUnmounted(() => {
+  if (projectContainer.value) {
+    projectContainer.value.removeEventListener("wheel", handleScroll);
+  }
+});
 </script>
 
 <style scoped>
@@ -118,19 +165,20 @@ const closeModal = () => {
 }
 
 .info-container {
-  max-width: calc(
-    100% - 20px
-  ); /* 전체 화면에서 20px 뺀 값만큼 최대 너비 설정 */
-  margin-left: 30px; /* 기존 마진 유지 */
+  max-width: calc(100% - 20px);
+  margin-left: 30px;
+  margin-right: 180px;
 }
 
 .project {
   display: flex;
+  overflow-x: hidden; /* 넘치는 경우 가로 스크롤을 숨김 */
+  white-space: nowrap; /* 내부 요소들이 줄바꿈되지 않도록 설정 */
   background-color: rgb(179, 111, 111);
   padding-top: 3px;
   margin-top: 30px;
   padding-bottom: 3px;
-  margin-right: 200px; /* 오른쪽 여백 설정 */
+  margin-right: 20px;
 }
 
 .project-item {
@@ -139,10 +187,14 @@ const closeModal = () => {
   margin-right: 3px;
   margin-left: 3px;
   padding: 5px;
-  cursor: pointer; /* 클릭 가능하도록 포인터 커서 추가 */
+  cursor: pointer;
+  flex: 0 0 auto; /* 요소가 줄 바꿈되지 않고 스크롤 가능하도록 설정 */
 }
 
 .project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지 */
   transition: opacity 0.3s ease;
 }
 
