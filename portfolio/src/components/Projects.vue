@@ -3,6 +3,7 @@
     <div class="info-container">
       <h3 class="title">Projects</h3>
       <div class="project" ref="projectContainer">
+        <!-- 영화 프로젝트 -->
         <div class="project-item" @click="openModal('영화 프로젝트')">
           <img
             src="/movie.png"
@@ -11,6 +12,7 @@
           />
           <div class="project-name">영화 프로젝트</div>
         </div>
+        <!-- 포트폴리오 프로젝트 -->
         <div class="project-item" @click="openModal('포트폴리오')">
           <img
             src="/portfolio.png"
@@ -19,8 +21,11 @@
           />
           <div class="project-name">포트폴리오</div>
         </div>
-
-      
+        <!-- O2O 프로젝트 -->
+        <div class="project-item" @click="openModal('O2O')">
+          <img src="/o2o.png" alt="O2O" class="project-img O2O-pjt" />
+          <div class="project-name">O2O</div>
+        </div>
       </div>
     </div>
   </section>
@@ -88,6 +93,17 @@ const projectDetails = {
       '<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> ' +
       '<img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" />',
     github: "https://github.com/iheeya/My_Portfolio",
+  },
+  O2O: {
+    date: "2024.07.08 ~ 2024.08.16",
+    people: "6인 프로젝트(FE_3, BE_3)",
+    description: "복잡한 비품 대여 간편화 서비스",
+    languages:
+      '<img src="https://img.shields.io/badge/html-5C6B81?style=for-the-badge&logo=html5&logoColor=white" />' +
+      '<img src="https://img.shields.io/badge/css-264DE4?style=for-the-badge&logo=css3&logoColor=white" /> ' +
+      '<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> ' +
+      ' <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>',
+    github: "https://github.com/iheeya/O2O",
   },
 };
 
@@ -175,7 +191,7 @@ onUnmounted(() => {
 
 .project-img {
   width: 100%;
-  height: 100%;
+  height: 250px;
   object-fit: cover; /* 이미지 비율 유지 */
   transition: opacity 0.3s ease;
 }
