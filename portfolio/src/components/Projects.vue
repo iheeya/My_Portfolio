@@ -26,6 +26,15 @@
           <img src="/o2o.png" alt="O2O" class="project-img O2O-pjt" />
           <div class="project-name">O2O</div>
         </div>
+        <!-- 새싹농부 프로젝트 -->
+        <div class="project-item" @click="openModal('sproutfarmer')">
+          <img
+            src="/sproutfarmer.png"
+            alt="O2O"
+            class="project-img sproutfarmer-pjt"
+          />
+          <div class="project-name">새싹농부</div>
+        </div>
       </div>
     </div>
   </section>
@@ -66,7 +75,7 @@ const projectContainer = ref(null);
 
 const projectDetails = {
   "영화 프로젝트": {
-    date: "2024.05.12 ~ 2024.05.23",
+    date: "2024.05.12 ~ 2024.05.23 (1주)",
     people: "2인 프로젝트",
     description:
       "영화 보는 것을 좋아하는 사람들을 위한 웹사이트. 사용자가 좋아하는 영화를 기반으로 영화를 추천해주고, 영화에 대해 토론할 수 있는 웹 사이트를 만들고자 했습니다.",
@@ -95,7 +104,7 @@ const projectDetails = {
     github: "https://github.com/iheeya/My_Portfolio",
   },
   O2O: {
-    date: "2024.07.08 ~ 2024.08.16",
+    date: "2024.07.08 ~ 2024.08.16 (6주)",
     people: "6인 프로젝트(FE_3, BE_3)",
     description: "복잡한 비품 대여 간편화 서비스",
     languages:
@@ -104,6 +113,18 @@ const projectDetails = {
       '<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> ' +
       ' <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>',
     github: "https://github.com/iheeya/O2O",
+  },
+  sproutfarmer: {
+    date: "2024.08.19 ~ 2024.10.11 (7주)",
+    people: "7인 프로젝트(FE_3, BE_2, DT_2)",
+    description: "초보 농부들을 위한 맞춤형 가이드 서비스",
+    languages:
+      '<img src="https://img.shields.io/badge/html-5C6B81?style=for-the-badge&logo=html5&logoColor=white" />' +
+      '<img src="https://img.shields.io/badge/css-264DE4?style=for-the-badge&logo=css3&logoColor=white" /> ' +
+      '<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> ' +
+      ' <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>' +
+      ' <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=black"/>',
+    github: "https://github.com/iheeya/sproutfarmer",
   },
 };
 
